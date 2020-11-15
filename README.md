@@ -1,2 +1,2 @@
 # Cpp-Algorithms
-Problems on LeetCode solved using C++.
+Problems on LeetCode that I solved using C++.
