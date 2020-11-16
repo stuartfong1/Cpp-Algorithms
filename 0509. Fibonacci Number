@@ -2,13 +2,14 @@
 class Solution {
 public:
     int fib(int N) {
-        vector<int> dp = {0, 1, 1, 2};
-        if(N >= dp.size())
+        int dp[31];
+        dp[0] = 0;
+        dp[1] = 1;
+        dp[2] = 1;
+        dp[3] = 2;
+        for(int i = 4; i <= N; ++i)
         {
-            for(int i = 4; i <= N; ++i)
-            {
-                dp.push_back(dp[i-1]+dp[i-2]);
-            }
+            dp[i] = (dp[i-1]+dp[i-2]);
         }
         return(dp[N]);
     }
