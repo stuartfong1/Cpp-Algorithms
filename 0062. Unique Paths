@@ -1,0 +1,22 @@
+// Dynamic Programming
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        int grid[100][100];
+        for(int row = 0; row < n; ++row)
+        {
+            for(int col = 0; col < m; ++col)
+            {
+                if(row == 0 || col == 0)
+                {
+                    grid[row][col] = 1;
+                }
+                else
+                {
+                    grid[row][col] = grid[row-1][col] + grid[row][col-1];
+                }
+            }
+        }
+        return grid[n-1][m-1];
+    }
+};
